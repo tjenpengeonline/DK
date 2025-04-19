@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HURTIG PENGETJENING</title>
+  <link rel="stylesheet" href="styles.css">
+
+ 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      function getCid(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) {
+          const fullCookieValue = parts.pop().split(';').shift();
+          const cidValue = fullCookieValue.split('.')[2] + '.' + fullCookieValue.split('.')[3];
+          return cidValue;
+        }
+        return null;
+      }
+
+      const cid = getCid('_ga');
+
+      // Получаем все кнопки с атрибутом onclick
+      var buttons = document.querySelectorAll('[onclick^="return gtag_report_conversion"]');
+
+      // Перебираем каждую кнопку
+      buttons.forEach(function (button) {
+        // Получаем текущее значение атрибута onclick
+        var currentOnClick = button.getAttribute('onclick');
+
+        // Извлекаем параметры из текущей ссылки
+        var urlParams = new URLSearchParams(window.location.search);
+        var keywordParam = urlParams.get('utm_term');
+        var gclidParam = urlParams.get('gclid');
+
+        // Формируем новую ссылку с параметрами
+        var newOnClick = "return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2?" + "utm_term=" + keywordParam + "&gclid=" + gclidParam + "&cid=" + cid + "')";
+
+        // Заменяем текущее значение атрибута onclick новым
+        button.setAttribute('onclick', newOnClick);
+      });
+    });
+  </script>
+  
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <span class="logo-icon euro-symbol">€</span>
+      HURTIG PENGETJENING
+    </div>
+  </header>
+  
+  <div class="cashout-cards-section">
+    <div class="cashout-cards-container">
+      <div class="cashout-cards-track">
+        <!-- Первый набор карточек -->
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/icon_vi.png" alt="Visa Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Visa</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>175</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/icon_bt.png" alt="Bitcoin Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Bitcoin</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>120</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/icon_et.png" alt="Ethereum Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Ethereum</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>95</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/mc.png" alt="Mastercard Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Mastercard</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>190</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/rev.png" alt="Revolut Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Revolut</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>150</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/pp.png" alt="PayPal Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">PayPal</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>85</div>
+          </div>
+        </div>
+        
+        <!-- Второй набор карточек (дубликат для бесконечной прокрутки) -->
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/icon_vi.png" alt="Visa Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Visa</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>175</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/icon_bt.png" alt="Bitcoin Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Bitcoin</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>120</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/icon_et.png" alt="Ethereum Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Ethereum</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>95</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/mc.png" alt="Mastercard Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Mastercard</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>190</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/rev.png" alt="Revolut Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">Revolut</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>150</div>
+          </div>
+        </div>
+        
+        <div class="cashout-card">
+          <div class="cashout-logo">
+            <img src="images/pp.png" alt="PayPal Logo">
+          </div>
+          <div class="cashout-details">
+            <div class="cashout-info">
+              <div class="cashout-bank">PayPal</div>
+              <div class="cashout-label">cashout</div>
+            </div>
+            <div class="cashout-amount"><span class="euro-symbol">€</span>85</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="main-content" style="background-image: url('images/hero-shadow-bg-2.a60035d9.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative; width: 100%; max-width: 100%; padding-left: 0; padding-right: 0; box-sizing: border-box; margin: 0;">
+    <!-- Dark overlay with gradient bottom -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(21, 21, 30, 0.85) 70%, rgba(21, 21, 30, 1) 100%); z-index: 1;"></div>
+    
+    <!-- Content wrapper with higher z-index -->
+    <div style="position: relative; z-index: 2;">
+      <h1 class="main-title">
+        <span class="highlight">Vi betaler dig</span> for at se hver video <br> på TikTok, Instagram og <br> YouTube platforme
+      </h1>
+      
+      <div class="stats">
+        <div class="stats-item">
+          <span class="stats-dot"></span>
+          Tjen €<span id="earnings-amount">1800</span><span class="spacer"></span>i dag
+        </div>
+        <div class="stats-item">
+          <span class="stats-dot"></span>
+          <span id="videos-count">900</span><span class="spacer"></span>videoer tilgængelige
+        </div>
+      </div>
+      
+      <div class="platforms-container">
+        <div class="platform-card">
+          <div class="platform-logo youtube-logo">
+            <div class="logo-content">
+              <img src="images/yt.png" alt="YouTube Logo">
+            </div>
+          </div>
+          <div class="platform-details">
+            <div class="platform-name">YouTube</div>
+            <div class="platform-type">Start med at se</div>
+            <div class="platform-price-rating">
+              <div class="platform-price">€1</div>
+              <div class="platform-rating">
+                <span class="star">★</span>
+                <span class="rating-value">5.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="platform-card">
+          <div class="platform-logo instagram-logo">
+            <div class="logo-content">
+              <img src="images/inst2-Photoroom.png" alt="Instagram Logo">
+            </div>
+          </div>
+          <div class="platform-details">
+            <div class="platform-name">Instagram</div>
+            <div class="platform-type">Start med at se</div>
+            <div class="platform-price-rating">
+              <div class="platform-price">€1.2</div>
+              <div class="platform-rating">
+                <span class="star">★</span>
+                <span class="rating-value">5.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="platform-card">
+          <div class="platform-logo tiktok-logo">
+            <div class="logo-content">
+              <img src="images/tt.png" alt="TikTok Logo">
+            </div>
+          </div>
+          <div class="platform-details">
+            <div class="platform-name">TikTok</div>
+            <div class="platform-type">Start med at se</div>
+            <div class="platform-price-rating">
+              <div class="platform-price">€1.2</div>
+              <div class="platform-rating">
+                <span class="star">★</span>
+                <span class="rating-value">5.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-section">
+    <h2 class="cta-title">Start nu</h2>
+    <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="telegram-button">Gå til Telegram</button>
+  </div>
+  
+  <div class="stats-section">
+    <div class="stats-column">
+      <div class="stats-value">
+        <span class="stats-icon rocket-icon">🚀</span>
+        <span id="avg-time">18m 14s</span>
+      </div>
+      <div class="stats-description">
+        Gennemsnitlig tid til første udbetaling i dag
+      </div>
+    </div>
+    
+    <div class="stats-column">
+      <div class="stats-value">
+        <span class="stats-icon fire-icon">🔥</span>
+        €<span id="avg-earnings">14,230.08</span>
+      </div>
+      <div class="stats-description">
+        Nuværende gennemsnitlige brugerindtjening
+      </div>
+    </div>
+    
+    <div class="stats-column">
+      <div class="stats-value">
+        <span class="euro-symbol">€</span><span id="total-earnings">60,850,083</span>+
+      </div>
+      <div class="stats-description">
+        Total € tjent på HURTIG PENGETJENING platform
+      </div>
+    </div>
+  </div>
+
+  <div class="features-section">
+    <h2 class="features-title">Sådan fungerer vores platform</h2>
+
+      <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #fff;">1. Vælg en video at se</h3>
+      <div class="telegram-cards-section">
+        <div class="telegram-cards-container" id="cards-container">
+          <!-- Telegram kártyák -->
+          <div class="telegram-card">
+            <div class="card-content">
+              <img src="images/pic1.png" alt="Telegram bot content" class="card-image">
+            </div>
+            <div class="card-title">Telegram bot</div>
+            <div class="card-actions">
+              <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="watch-btn">Se</button>
+            </div>
+            <div class="card-footer">
+              <div class="card-price"><span class="price-wrapper"><span class="euro-symbol">€</span>100.00</span></div>
+            </div>
+          </div>
+          
+          <div class="telegram-card">
+            <div class="card-content">
+              <img src="images/pic2.png" alt="Telegram bot content" class="card-image">
+            </div>
+            <div class="card-title">Telegram bot</div>
+            <div class="card-actions">
+              <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="watch-btn">Se</button>
+            </div>
+            <div class="card-footer">
+              <div class="card-price"><span class="price-wrapper"><span class="euro-symbol">€</span>25.00</span></div>
+            </div>
+          </div>
+          
+          <div class="telegram-card">
+            <div class="card-content">
+              <img src="images/pic3.png" alt="Telegram bot content" class="card-image">
+            </div>
+            <div class="card-title">Telegram bot</div>
+            <div class="card-actions">
+              <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="watch-btn">Se</button>
+            </div>
+            <div class="card-footer">
+              <div class="card-price"><span class="price-wrapper"><span class="euro-symbol">€</span>17.00</span></div>
+            </div>
+          </div>
+          
+          <div class="telegram-card">
+            <div class="card-content">
+              <img src="images/pic4.png" alt="Telegram bot content" class="card-image">
+            </div>
+            <div class="card-title">Telegram bot</div>
+            <div class="card-actions">
+              <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="watch-btn">Se</button>
+            </div>
+            <div class="card-footer">
+              <div class="card-price"><span class="price-wrapper"><span class="euro-symbol">€</span>10.00</span></div>
+            </div>
+          </div>
+          
+          <div class="telegram-card">
+            <div class="card-content">
+              <img src="images/pic5.png" alt="Telegram bot content" class="card-image">
+            </div>
+            <div class="card-title">Telegram bot</div>
+            <div class="card-actions">
+              <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="watch-btn">Se</button>
+            </div>
+            <div class="card-footer">
+              <div class="card-price"><span class="price-wrapper"><span class="euro-symbol">€</span>25.00</span></div>
+            </div>
+          </div>
+          
+          <div class="telegram-card">
+            <div class="card-content">
+              <img src="images/pic6.png" alt="Telegram bot content" class="card-image">
+            </div>
+            <div class="card-title">Telegram bot</div>
+            <div class="card-actions">
+              <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="watch-btn">Se</button>
+            </div>
+            <div class="card-footer">
+              <div class="card-price"><span class="price-wrapper"><span class="euro-symbol">€</span>75.00</span></div>
+            </div>
+          </div>
+          
+        </div>
+                <p class="feature-description">Vælg videoer på indtjeningssiden. Vi tilbyder de bedste videoer fra indholdsskabere, der ønsker at promovere deres videoer.</p>
+
+      </div>
+      
+    <div class="features-container">
+     
+      <div class="feature-item">
+        <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #fff;">2. Se og bedøm videoerne</h3>
+        <img src="images/creo_2.jpg" alt="Video verifikation" class="feature-image">
+        <p class="feature-description">De fleste videoer er meget korte, og tusinder har allerede tjent penge ved at se videoer. De fleste videoer tager ca. 1-3 minutter at se.</p>
+      </div>
+      
+      <div class="feature-item">
+        <h3 style="text-align: center; margin-bottom: 1.5rem; font-size: 1.5rem; color: #fff;">3. Få din belønning</h3>
+        <img src="images/creo_1.jpg" alt="Øjeblikkelige udbetalinger" class="feature-image">
+        <p class="feature-description">Du får en belønning for hver video, du ser: 1 video = €1. Hæv pengene til dit kort!</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="advantages-section">
+    <div class="advantages-header">
+      <h2 class="advantages-title">Vi er den bedste platform til at tjene penge!<span class="advantages-subtitle">Her er hvorfor:</span></h2>
+    </div>
+    
+    <div class="advantages-container">
+      <div class="advantage-item">
+        <div class="advantage-icon">
+          <span>💰</span>
+        </div>
+        <h3 class="advantage-title">Højeste udbetalinger</h3>
+        <p class="advantage-description">Tjen meget mere end på andre platforme. Vores mål er at hjælpe dig med at tjene så mange penge som muligt.</p>
+      </div>
+      
+      <div class="advantage-item">
+        <div class="advantage-icon">
+          <span>⚡</span>
+        </div>
+        <h3 class="advantage-title">Øjeblikkelige udbetalinger</h3>
+        <p class="advantage-description">Har du brug for penge med det samme? Intet problem. Du kan hæve dine penge næsten øjeblikkeligt, startende fra €100.</p>
+      </div>
+      
+      <div class="advantage-item">
+        <div class="advantage-icon">
+          <span>🎁</span>
+        </div>
+        <h3 class="advantage-title">Daglige bonusser</h3>
+        <p class="advantage-description">Begynd at se videoer for at modtage ekstra belønninger, helt gratis.</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="payment-methods-section">
+    <h2 class="payment-methods-title">Udbetalingsmetoder</h2>
+    <div class="payment-methods-container">
+      <div class="payment-method-item">
+        <div class="payment-icon litecoin">
+          <img src="images/icon_app.png" alt="Litecoin">
+        </div>
+      </div>
+      <div class="payment-method-item">
+        <div class="payment-icon visa">
+          <img src="images/icon_bt.png" alt="Visa">
+        </div>
+      </div>
+      <div class="payment-method-item">
+        <div class="payment-icon bitcoin">
+          <img src="images/icon_et.png" alt="Bitcoin">
+        </div>
+      </div>
+      <div class="payment-method-item">
+        <div class="payment-icon google-play">
+          <img src="images/icon_go.png" alt="Google Play">
+        </div>
+      </div>
+      <div class="payment-method-item">
+        <div class="payment-icon apple">
+          <img src="images/icon_l.png" alt="Apple">
+        </div>
+      </div>
+      <div class="payment-method-item">
+        <div class="payment-icon ethereum">
+          <img src="images/icon_vi.png" alt="Ethereum">
+        </div>
+      </div>
+     
+     
+     
+     
+    </div>
+  </div>
+  
+  <div class="testimonials-section">
+    <h2 class="testimonials-title">Alle taler om HURTIG PENGETJENING</h2>
+    
+    <div class="testimonials-container">
+      <div class="testimonial-card">
+        <div class="testimonial-rating">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <h3 class="testimonial-heading">Fremragende måde at tjene penge på!</h3>
+        <p class="testimonial-text">Jeg ser bare videoer på Telegram-botten, og pengene kommer ind på min konto. Det er nemt og behageligt!</p>
+        <div class="testimonial-author">BOnTheKeyZ</div>
+        <div class="testimonial-date">1 år siden</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-rating">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <h3 class="testimonial-heading">Overraskende enkelt og effektivt!</h3>
+        <p class="testimonial-text">Jeg startede for en uge siden og har allerede tjent over 500€. Jeg anbefaler det til alle mine venner!</p>
+        <div class="testimonial-author">Maria_Elena</div>
+        <div class="testimonial-date">2 måneder siden</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-rating">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <h3 class="testimonial-heading">Udbetalingerne virker virkelig!</h3>
+        <p class="testimonial-text">Jeg troede, det var et bedrageri, men jeg modtog min første udbetaling inden for 24 timer. Nu er det min primære indtægtskilde!</p>
+        <div class="testimonial-author">Alex_87</div>
+        <div class="testimonial-date">3 uger siden</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-rating">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">☆</span>
+        </div>
+        <h3 class="testimonial-heading">Meget godt, men udbetalinger kan blive forsinket</h3>
+        <p class="testimonial-text">Systemet er fremragende, men nogle gange forsinkes udbetalinger med et par timer. Ellers fungerer alt perfekt.</p>
+        <div class="testimonial-author">CristianP</div>
+        <div class="testimonial-date">6 måneder siden</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-rating">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <h3 class="testimonial-heading">Perfekt til studerende!</h3>
+        <p class="testimonial-text">Som studerende har jeg ikke meget fritid, men dette er perfekt til at tjene penge i pauserne. Anbefales!</p>
+        <div class="testimonial-author">Laura_2000</div>
+        <div class="testimonial-date">2 uger siden</div>
+      </div>
+      
+      <div class="testimonial-card">
+        <div class="testimonial-rating">
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+          <span class="testimonial-star">★</span>
+        </div>
+        <h3 class="testimonial-heading">Fremragende kundeservice!</h3>
+        <p class="testimonial-text">Jeg havde et spørgsmål om at hæve penge, og kundeservice svarede inden for 5 minutter. Førsteklasses service og en ægte indtjeningsmulighed!</p>
+        <div class="testimonial-author">DanielM</div>
+        <div class="testimonial-date">1 måned siden</div>
+      </div>
+      
+      <!-- Additional reviews here -->
+    </div>
+    
+    <div class="testimonials-navigation">
+      <button class="nav-button prev-button">
+        &larr;
+      </button>
+      <button class="nav-button next-button">
+        &rarr;
+      </button>
+    </div>
+  </div>
+  
+  <div class="telegram-cta">
+    <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="telegram-link-button">Gå til Telegram</button>
+  </div>
+  
+  <div class="faq-section">
+    <h2 class="faq-title">Ofte stillede spørgsmål</h2>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Hvad kræves der for at deltage i partnerprogrammet?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Du skal være mindst 18 år gammel, have en smartphone, Telegram-app og internetforbindelse.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Hvordan tilmelder jeg mig partnerprogrammet?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Besøg vores Telegram-kanal og tryk på START-knappen på vores kanal.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Hvordan aktiverer jeg min konto?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>For at aktivere din konto skal du trykke på START-knappen på vores Telegram-kanal.</p>
+        </div>
+      </div>
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Hvad er hovedfunktionen i partnerprogrammet?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">
+          <p>Det er meget enkelt at samarbejde med vores partnerprogram. Du ser, bedømmer og tjener penge på TikTok, Instagram og YouTube videoer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="realtime-payments-section">
+    <div class="realtime-payments-container">
+      <div class="realtime-payments-header">
+        <span class="green-dot"></span>
+        <span>Realtidsudbetalinger</span>
+      </div>
+      
+      <div class="payment-card">
+        <div class="payment-amount" id="realtime-payment">€148,750</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-telegram-button">
+    <button onclick="return gtag_report_conversion('https://iranianbloodstream.click/W4FdHzf2')" class="main-telegram-link">Gå til Telegram</button>
+  </div>
+  
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="footer-logo-text"><span class="euro-symbol">€</span>HURTIG PENGETJENING</div>
+      </div>
+      
+      <div class="footer-copyright">
+        ©2020 - 2025 HURTIG PENGETJENING. Alle rettigheder forbeholdes.
+      </div>
+      
+      <div class="footer-links">
+        <a href="policy.html" class="footer-link">Privatlivspolitik</a>
+        <a href="disclaimer.html" class="footer-link">Ansvarsfraskrivelse</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Popup -->
+  <div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-popup-content">
+      <div class="cookie-popup-header">
+        <h3>Vi bruger cookies</h3>
+        <button id="cookie-close" class="cookie-close">&times;</button>
+      </div>
+      <p>Ved at bruge vores hjemmeside accepterer du vores <a href="policy.html" class="cookie-link">Privatlivspolitik</a> og <a href="disclaimer.html" class="cookie-link">Ansvarsfraskrivelse</a>.</p>
+      <div class="cookie-buttons">
+        <button id="cookie-accept" class="cookie-accept">Accepter og fortsæt</button>
+        <button id="cookie-deny" class="cookie-deny">Fortsæt uden at acceptere</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- External JavaScript file -->
+  <script src="scripts.js"></script>
+</body>
+</html>
